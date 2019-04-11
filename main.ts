@@ -49,16 +49,16 @@ namespace lcd1602 {
         addr5 = 0x3e
     }
     export enum on_off {
-        //% block="on"
+        //% block="Encendido"
         on = 1,
-        //% block="off"
+        //% block="Apagado"
         off = 0
     }
 
     export enum visibled {
-        //% block="visibled"
+        //% block="Visible"
         visible = 1,
-        //% block="invisibled"
+        //% block="Oculto"
         invisible = 0
     }
 
