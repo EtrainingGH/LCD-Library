@@ -76,9 +76,9 @@ namespace lcd1602 {
     } 
 
     /**
-     * 初始化I2C地址
+     * Inicializar la dirección I2C
      */
-    //% blockId="LCD_setAddress" block="LCD1602 I2C address %myAddr"
+    //% blockId="LCD_setAddress" block="LCD1602 I2C Dirección %myAddr"
     //% weight=51 blockExternalInputs=true
     export function setAddress(myAddr: I2C_ADDR): void {
         LCD_I2C_ADDR = myAddr
@@ -86,16 +86,16 @@ namespace lcd1602 {
     }
 
     /**
-     * 初始化I2C地址（数字）
+     * Inicializar la dirección I2C (número)
      */
-    //% blockId="LCD_setAddress2" block="LCD1602 I2C address %myAddr"
+    //% blockId="LCD_setAddress2" block="LCD1602 I2C Dirección %myAddr"
     //% weight=50 blockExternalInputs=true
     export function setAddress2(myAddr: number): void {
         LCD_I2C_ADDR = myAddr
         setI2CAddress()
     }
 
-    // 自动识别I2C地址 from https://github.com/microbit-makecode-packages/I2CLCD1620_cn/commit/d22eca95d7dae176f40888ce5b88c4605d5ce78c
+    // Identificación automática de direcciones I2C from https://github.com/microbit-makecode-packages/I2CLCD1620_cn/commit/d22eca95d7dae176f40888ce5b88c4605d5ce78c
     function AutoAddr() {
         let k = true
         let addr = 0x20
@@ -123,9 +123,9 @@ namespace lcd1602 {
     }
 
     /**
-     * 自动初始化I2C地址
+     * Auto ajuste LCD1602 dirección I2C
      */
-    //% blockId="LCD_setAddress3" block="Auto set LCD1602 I2C address"
+    //% blockId="LCD_setAddress3" block="Auto ajuste LCD1602 I2C dirección"
     //% weight=50
     export function setAddress3(): void {
         LCD_I2C_ADDR = AutoAddr()
@@ -135,7 +135,7 @@ namespace lcd1602 {
     /**
      * 清屏
      */
-    //% blockId="LCD_clear" block="LCD clear"
+    //% blockId="LCD_clear" block="LCD Limpio"
     //% weight=45
     export function clear(): void {
         setcmd(0x01)
