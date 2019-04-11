@@ -1,0 +1,17 @@
+{
+    "name": "lcd1602",
+    "version": "0.1.0",
+    "description": "LCD1602液晶microbit扩展包",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/lcd1602-strings.json",
+        "_locales/zh-CN/lcd1602-strings.json",
+        "_locales/zh-TW/lcd1602-strings.json"
+    ],
+    "public": true
+}
