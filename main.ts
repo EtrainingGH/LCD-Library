@@ -142,9 +142,9 @@ namespace lcd1602 {
     }
 
     /**
-     * 设置背光
+     * Ajuste de luz de fondo
      */
-    //% blockId="LCD_backlight" block="set LCD backlight %on"
+    //% blockId="LCD_backlight" block="Establecer LCD retroiluminación %on"
     //% weight=46
     export function set_backlight(on: on_off): void {
         if (on == 1)
@@ -155,9 +155,9 @@ namespace lcd1602 {
     }
 
     /**
-     * 设置字符串显示
+     * Establecer cadena de visualización
      */
-    //% blockId="LCD_Show" block="set string %show"
+    //% blockId="LCD_Show" block="Establecer cadena %show"
     //% weight=47
     export function set_LCD_Show(show: visibled): void {
         if (show == 1)
@@ -182,9 +182,9 @@ namespace lcd1602 {
     }
 
     /**
-     * 打印字符串
+     * Cadena de impresión
      */
-    //% blockId="LCD_putString" block="LCD show string %s|on x:%x|y:%y"
+    //% blockId="LCD_putString" block="LCD mostrar cadena %s|on x:%x|y:%y"
     //% weight=49 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putString(s: string, x: number, y: number): void {
         if (s.length > 0) {
@@ -202,27 +202,27 @@ namespace lcd1602 {
     }
 	
     /**
-     * 打印数字
+     * Número de impresión
      */
-    //% blockId="LCD_putNumber" block="LCD show number %n|on x:%x|y:%y"
+    //% blockId="LCD_putNumber" block="LCD mostrar número %n|on x:%x|y:%y"
     //% weight=48 blockExternalInputs=true x.min=0 x.max=15 y.min=0 y.max=1
     export function putNumber(n: number, x: number, y: number): void {
         putString(n.toString(),x,y)
     }
 
     /**
-     * 屏幕左移
+     * Desplazar pantalla izquierda
      */
-    //% blockId="LCD_shl" block="Shift Left"
+    //% blockId="LCD_shl" block="Cambio Izquierda"
     //% weight=43
     export function shl(): void {
         setcmd(0x18)
     }
 
     /**
-     * 屏幕右移
+     * Desplazar pantalla derecha
      */
-    //% blockId="LCD_shr" block="Shift Right"
+    //% blockId="LCD_shr" block="Cambio derecha"
     //% weight=42
     export function shr(): void {
         setcmd(0x1C)
